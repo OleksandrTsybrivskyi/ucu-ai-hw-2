@@ -1,0 +1,7 @@
+.venv/
+train/
+val/
+test/
+test_images.csv
+multiple-object-video-detection-hw-2-ucu-ai-2026.zip
+my-notes.txt
