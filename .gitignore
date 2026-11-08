@@ -4,4 +4,9 @@ val/
 test/
 test_images.csv
 multiple-object-video-detection-hw-2-ucu-ai-2026.zip
+notebooks/cv_splits.csv
+
+# my files
 my-notes.txt
+data.txt
+overview.txt
