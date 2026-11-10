@@ -5,6 +5,9 @@ test/
 test_images.csv
 multiple-object-video-detection-hw-2-ucu-ai-2026.zip
 notebooks/cv_splits.csv
+data_masked.yaml
+notebooks/yolov8n.pt
+runs/
 
 # my files
 my-notes.txt
