@@ -80,9 +80,15 @@ Here are the results for YOLOv8n
 
 ![YOLOv8n](images/results_yolo.png)
 
+We see that after 5 epoch `val/box_loss` `val/cls_loss` and `val/dfl_loss` started growing which caused `metrics/mAP50(B)` and `metrics/mAP50-95(B)` to drop. It means model started overfitting. To solve the problem we should only use weights from epoch with the best metrics when testing. But we used weights from `best.pt` file, which are weights from the best epoch.
+
+---
+
 Here are the results for RT-DETR
 
 ![YOLOv8n](images/results_RT_DETR.png)
+
+Here we see similar problem with overfitting. `val/giou_loss` `val/cls_loss` and `val/l1_loss` started growing after 2nd epoch, and `metrics/mAP50(B)` and `metrics/mAP50-95(B)` started dropping after 2nd epoch, which shows the same problem of overfitting, which is solved by taking weights from the best epoch.
 
 
 <!-- 
@@ -97,5 +103,5 @@ Images go into the `images/` folder:
 
 ## Conclusion
 
-In summary we can say that transformer query model was more efficient than one stage anchor free. It happened because it was more effiicient at distinguishing close objects and because transformers are better for cases with big dataset and when we have a lot of compute. Transformer model trained 150% more time than one stage anchor free, which serves more like intuitive explanation why it is more efficient. On lower dataset YOLO would be more efficient i guess.
+In summary we can say that transformer query model was more efficient than one stage anchor free. It happened because it was more effiicient at distinguishing close objects and because transformers are better for cases with big dataset and when we have a lot of compute. Transformer model trained 150% more time than one stage anchor free. On lower dataset YOLO would be more efficient i guess.
 
